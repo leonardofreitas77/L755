@@ -1,10 +1,10 @@
 body{
-    background-color: hsla(234, 100%, 71%, 0.933);
+    background-color: hsla(0, 0%, 18%, 0.933);
 }
 
 form{
     width: 400px;
-    background-color: #ff1515;
+    background-color: #616060;
 
     padding: 20px;
     margin: 50px auto;
@@ -19,7 +19,7 @@ label {
 }
 
 input{
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin-bottom: 15px;
 }
