@@ -150,3 +150,72 @@ nav a:hover {
 section {
     padding: 100px 10%;
 }
+
+.titulo-secao {
+    margin-bottom: 50px;
+}
+
+.titulo-secao p {
+    color: #7c5cff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+} 
+.titulo-secao h2 {
+    font-size: 30px;
+}
+
+/* ==================== */
+/* SOBRE             */
+/* ==================== */
+
+.sobre {
+    background-color: #15151d;
+}
+
+.sobre-conteudo {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.sobre-texto {
+    flex: 1;
+    color: #b8b8c7;
+}
+.sobretexto p {
+    margin-bottom: 20px;
+}
+
+.habilidades {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.habilidade {
+    background-color: #1d1d27;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #7c5cff;
+}
+
+.habilidade h3 {
+    margin-bottom: 5px;
+}
+
+.habilidade p {
+    color: #9292a0;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
