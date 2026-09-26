@@ -1,0 +1,57 @@
+Pseudo-classe	                                    Exemplo	O que significa
+
+:active	a:active                                    Quando o link está sendo clicado/pressionado
+
+:checked	input:checked                           Seleciona uma caixa de seleção ou opção que está marcada
+
+:disabled	input:disabled                          Seleciona um campo desabilitado
+
+:enabled	input:enabled	                        Seleciona um campo habilitado
+
+:empty	div:empty	                                Seleciona um elemento que não possui nada dentro
+
+:first-child	p:first-child	                    Seleciona o primeiro filho de um elemento
+
+:first-of-type	p:first-of-type	                    Seleciona o primeiro elemento daquele tipo
+
+:focus	input:focus	                                Quando você clica/entra em um campo para digitar
+
+:hover	a:hover	                                    Quando o mouse passa por cima do elemento
+
+:invalid	input:invalid	                        Campo com valor inválido
+
+:valid	input:valid	                                Campo com valor válido
+
+:last-child	li:last-child	                        Seleciona o último filho
+
+:last-of-type	p:last-of-type	                    Seleciona o último elemento daquele tipo
+
+:link	a:link	                                    Link que ainda não foi visitado
+
+:visited	a:visited	                            Link que já foi visitado
+
+:not()	:not(p)	                                    Seleciona tudo que não for <p>
+
+:nth-child()	p:nth-child(2)	                    Seleciona o elemento que ocupa determinada posição
+
+:nth-of-type()	p:nth-of-type(2)	                Seleciona o segundo <p>, por exemplo
+
+:only-child	p:only-child	                        Seleciona um elemento que é o único filho
+
+:optional	input:optional	                        Campo que não é obrigatório
+
+:required	input:required	                        Campo que é obrigatório
+
+:read-only	input:read-only	                        Campo que não pode ser editado
+
+:read-write	input:read-write	                    Campo que pode ser editado
+
+:placeholder-shown	input:placeholder-shown	        Quando o campo está mostrando o placeholder
+
+:root	:root	                                    Seleciona a raiz do documento, normalmente <html>
+
+:target	:target	                                    Seleciona o elemento indicado pelo endereço/âncora da página
+
+:has()	h2:has(+p)	                                Seleciona um elemento que possui determinada relação com outro
+
+:is()	:is(ul, ol)	                                Permite selecionar vários tipos de elementos de uma vez
