@@ -1,4 +1,4 @@
-<?php
+<?=
     $nome = "Leonardo";
     $idade = 16;
     $altura = 1.79;
@@ -30,7 +30,7 @@
     <header> 
      <div class="logo">
         <h2> <?= $resultado ?> </h2>
-     <!--<h2> Leonardo <span>Freitas</span></h2> -->
+     <h2> Leonardo <span>Freitas</span></h2>
      </div>
      <nav>
           <a href="#inicio">inicio</a>
