@@ -7,7 +7,13 @@ $idade = $_POST["idade"];
 $resultado = "";
 
 
-
+if ($idade >= 18) 
+    {
+        $resultado = "é de maior";
+    }
+    else {
+        $resultado = "é de menor";
+    }
 
 
 
@@ -16,27 +22,19 @@ $resultado = "";
 ?>
 <!DOCTYPE html>
 <body>
-<header>
-    <nav>
-        <a href="idade.php">inicio </a>
-        <a hrep=" cadastro.html">CADASTROS </a>
-    </nav>
-</header>
-</body>
-<main>
-    <section class="Cadastro"> 
-        <h1>cadastro</h1>
-     <form method="POST"> 
 
+
+        <h1>cadastro</h1>
+        <form method="POST"> 
 <label>Nome:</label>
 <input type="text" class="nome" id="nome" name="nome">
 
 <label>IDADE:</label>
 <input type="number" class="idade" id="idade" name="idade">
+
 <button type="submit"> Cadastrar</button>
 
      </form>
      <p> <?= $resultado?> </p>
-    </section>
-</main>
+   
 </body>
