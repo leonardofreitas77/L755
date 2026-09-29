@@ -40,7 +40,7 @@ if ($idade >= 18)
 
 </div>             
 <div class="divIdade">
-    <label>IDADE:</label>
+    <label>idade:</label>
     <input type="number" class="idade" id="idade" name="idade">
 </div>
 
