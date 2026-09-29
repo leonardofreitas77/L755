@@ -4,7 +4,7 @@ $nome = $_POST ["nome"];
 $idade = $_POST["idade"];
 
 
-
+$resultado = "";
 
 
 
@@ -14,6 +14,7 @@ $idade = $_POST["idade"];
     
 
 ?>
+<p> <?= $resultado?> </p>
 <!DOCTYPE html>
 <body>
 <header>
