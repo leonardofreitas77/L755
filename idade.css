@@ -1,6 +1,21 @@
+ *{
+
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color:rgba(51, 68, 161, 0.466);
+    background-color:rgba(13, 48, 247, 0.466);
     color: aliceblue;
     line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
