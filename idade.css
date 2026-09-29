@@ -1,3 +1,25 @@
- .idade {
-    background-color: blue;
+ *{
+    margin: 0%;
+ }
+
+ .divNome {
+    background-color: aliceblue;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .divIdade {
+    background-color: aliceblue;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
  }

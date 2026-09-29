@@ -32,12 +32,17 @@ if ($idade >= 18)
 <body>
 
         <h1>cadastro</h1>
-        <form method="POST"> 
-<label>Nome:</label>
-<input type="text" class="nome" id="nome" name="nome">
+        <form method="POST">
+<div class="divNome">
 
-<label>IDADE:</label>
-<input type="number" class="idade" id="idade" name="idade">
+    <label>Nome:</label>
+    <input type="text" class="nome" id="nome" name="nome">
+
+</div>             
+<div class="divIdade">
+    <label>IDADE:</label>
+    <input type="number" class="idade" id="idade" name="idade">
+</div>
 
 <button type="submit"> Cadastrar</button>
 
