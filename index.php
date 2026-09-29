@@ -154,16 +154,16 @@
                 <div class="numero-projeto">
                     01
                 </div>
-                <h3>Sistemas de cadastro</h3>
+                <h3>Sistema de idade</h3>
                 <p>
-                    Descrição do sistema do cadastro
+                    Descrição do sistema de idade
                 </p>
                 <div class="tecnologias">
                     <span>HTML</span>
                     <span>CSS</span>
                     <!--span>PHP</span-->
                 </div>
-                <a href="cadastro.html">ver projetos</a>
+                <a href="idade.php">ver projetos</a>
             </div>
          </div>
       </section>
