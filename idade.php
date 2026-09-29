@@ -14,7 +14,6 @@ $resultado = "";
     
 
 ?>
-<p> <?= $resultado?> </p>
 <!DOCTYPE html>
 <body>
 <header>
@@ -28,6 +27,7 @@ $resultado = "";
     <section class="Cadastro"> 
         <h1>cadastro</h1>
      <form method="POST"> 
+
 <label>Nome:</label>
 <input type="text" class="nome" id="nome" name="nome">
 
@@ -36,6 +36,7 @@ $resultado = "";
 <button type="submit"> Cadastrar</button>
 
      </form>
+     <p> <?= $resultado?> </p>
     </section>
 </main>
 </body>
