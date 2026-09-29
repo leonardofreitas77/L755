@@ -121,7 +121,7 @@
                 <div class="numero-projeto">
                     01
                 </div>
-                <h3>Sistemas de cadastro</h3>
+                <h3>Sistemas de treinamento do css</h3>
                 <p>
                     Descrição do sistema do cadastro
                 </p>
@@ -130,7 +130,7 @@
                     <span>CSS</span>
                     <!--span>PHP</span-->
                 </div>
-                <a href="cadastro.html">ver projetos</a>
+                <a href="treinando-css.html">ver projetos</a>
             </div>
             <!-- PROJETO 3 -->
          <div class="projetos">
