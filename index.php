@@ -123,7 +123,7 @@
                 </div>
                 <h3>Sistemas de treinamento do css</h3>
                 <p>
-                    Descrição do sistema do cadastro
+                    treinando css 
                 </p>
                 <div class="tecnologias">
                     <span>HTML</span>
