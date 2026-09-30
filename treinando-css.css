@@ -5,7 +5,7 @@ body {
     background-color: rgb(60, 78, 102);
     
 }
-
+ 
 .botao-login,.botao-cadastro {
     padding: 10px 20px;
     border: none;
@@ -38,4 +38,25 @@ body {
 .logo {
     color: #b8c2d1;
     margin-top: 5px; 
+}
+.menu-principal {
+    background-color: #0d1422;
+    margin-top: 20px;
+}
+
+.menu-lista {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding: 15px 0;
+}
+.menu-lista a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.menu-lista a:hover {
+    color: #4f8cff;
 }
