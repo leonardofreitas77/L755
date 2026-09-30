@@ -31,3 +31,11 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.logo h1 {
+    font-size: 32px;
+    color: #4f8cff;
+}
+.logo {
+    color: #b8c2d1;
+    margin-top: 5px; 
+}
