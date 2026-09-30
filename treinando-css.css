@@ -6,13 +6,10 @@ body {
     
 }
 
-.logo h1{
-    background-color: rgb(25, 31, 36);
-    border-radius: 20px;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;     
+.botao-login,.botao-cadastro {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+
+
 }
