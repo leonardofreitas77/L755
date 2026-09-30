@@ -162,3 +162,13 @@ body {
     cursor: pointer;
 }
 
+.categorias ul {
+    list-style: none;
+}
+
+.categorias li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    
+}
