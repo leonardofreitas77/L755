@@ -11,5 +11,13 @@ body {
     border: none;
     border-radius: 8px;
 
+}
 
+.botao-login {
+    background-color: #010152;
+    color: white;
+}
+.botao-cadastro {
+    background-color: #4f8cff;
+    color: white;
 }
