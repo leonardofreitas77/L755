@@ -21,3 +21,13 @@ body {
     background-color: #4f8cff;
     color: white;
 }
+.cabecalho {
+    background-color: #172033;
+    color: white;
+    padding: 20px 0;
+}
+.cabecalho-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
