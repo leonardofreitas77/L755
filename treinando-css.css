@@ -60,3 +60,47 @@ body {
 .menu-lista a:hover {
     color: #4f8cff;
 }
+.secao {
+    padding: 40px 0;
+}
+.titulo-secao {
+    margin-bottom: 25px;
+}
+.titulo-secao h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.titulo-secao p {
+    color: #c5cedb;
+}
+.card-destaque {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0, 0.25);
+}
+.card-imagem img {
+    width: 100%;
+    display: block;
+}
+.card-conteudo {
+    padding: 25px;
+}
+
+.categoria {
+    color: #4f8cff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.card-conteudo h3 {
+    color: #172033;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.card-conteudo p {
+    color: #555;
+    line-height: 1.6;
+}
