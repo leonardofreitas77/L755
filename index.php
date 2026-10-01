@@ -87,16 +87,16 @@
                 <div class="numero-projeto">
                     01
                 </div>
-                <h3>Sistemas de cadastro</h3>
+                <h3>idade-get.php</h3>
                 <p>
-                    Descrição do sistema do cadastro
+                    continuando o idade php
                 </p>
                 <div class="tecnologias">
                     <span>HTML</span>
                     <span>CSS</span>
                     <!--span>PHP</span-->
                 </div>
-                <a href="cadastro.html">ver projetos</a>
+                <a href="idade-get.php">ver projetos</a>
             </div>
             <!--PROJETO-->
          <div class="projetos">
