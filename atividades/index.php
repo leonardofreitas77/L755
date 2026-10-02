@@ -147,6 +147,23 @@
                 </div>
                 <a href="idade.php">ver projetos</a>
             </div>
+             <!--PROJETO-->
+         <div class="projetos">
+            <div class="card">
+                <div class="numero-projeto">
+                    01
+                </div>
+                <h3>percistencia de dados</h3>
+                <p>
+                   dados
+                </p>
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <!--span>PHP</span-->
+                </div>
+                <a href="dados.php">ver projetos</a>
+            </div>
          </div>
       </section>
       <section id="contato" class="contato">
