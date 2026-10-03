@@ -162,7 +162,7 @@
                     <span>CSS</span>
                     <!--span>PHP</span-->
                 </div>
-                <a href="dados.php">ver projetos</a>
+                <a href="dados-json.php">ver projetos</a>
             </div>
          </div>
       </section>
