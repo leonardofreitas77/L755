@@ -123,7 +123,7 @@ $conteudoJson = file_get_contents(__DIR__ . "/dados/intro.json");
     <?php foreach ($alunos as $aluno) { ?>
 
         <h2> <?= $aluno["nome"] ?></h2>
-        <p> <?= Idade: $aluno["idade"] ?> </p>
+        <p>  Idade: <?= $aluno["idade"] ?> </p>
 
         <!-- PORTUGUES --->
 
@@ -139,7 +139,7 @@ $conteudoJson = file_get_contents(__DIR__ . "/dados/intro.json");
         <P>Prova 3: <?= $aluno ["notas"]["matematica"]["prova3"] ?> </P>
 
         <!-- HISTÓRIA -->
-         
+
         <P>Prova 1: <?= $aluno ["notas"]["historia"]["prova1"] ?> </P>
         <P>Prova 2: <?= $aluno ["notas"]["historia"]["prova2"] ?> </P>
         <P>Prova 3: <?= $aluno ["notas"]["historia"]["prova3"] ?> </P>
