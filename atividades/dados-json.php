@@ -107,13 +107,27 @@ $conteudoJson = file_get_contents(__DIR__ . "/dados/intro.json");
         <input type="number" name=portugues_prova2 min="0" max="10" step="0.1" required>
         <br><br>
         <label>Prova 3:</label>
-        <input type="number" name=portugues_prova min="0" max="10" step="0.1" required>
+        <input type="number" name=portugues_prova3 min="0" max="10" step="0.1" required>
+
         <h2>matemática</h2>
         <label>Prova 1:</label>
         <input type="number" name=matematica_prova1 min="0" max="10" step="0.1" required>
         <br><br>
         <label>prova 2:</label>
         <input type="number" name=matematica_prova2 min="0" max="10" step="0.1" required>
+        <br><br>
+        label>prova 3:</label>
+        <input type="number" name=matematica_prova3 min="0" max="10" step="0.1" required>
+
+        <br><br>
+        label>prova 1:</label>
+        <input type="number" name=historia_prova1 min="0" max="10" step="0.1" required>
+        <br><br>
+        label>prova 2:</label>
+        <input type="number" name=historia_prova2 min="0" max="10" step="0.1" required>
+        <br><br>
+        label>prova 3:</label>
+        <input type="number" name=historia_prova3 min="0" max="10" step="0.1" required>
         <br><br>
         <button type="submit">Enviar</button>
     </form>

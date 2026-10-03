@@ -134,7 +134,7 @@
          <div class="projetos">
             <div class="card">
                 <div class="numero-projeto">
-                    01
+                    02
                 </div>
                 <h3>Sistema de idade</h3>
                 <p>
@@ -151,7 +151,7 @@
          <div class="projetos">
             <div class="card">
                 <div class="numero-projeto">
-                    01
+                    03
                 </div>
                 <h3>percistencia de dados</h3>
                 <p>
