@@ -181,7 +181,7 @@
     </main>
     <footer>
         <p>
-           desenvolvido por <a href="https://look.devlook.xyz">Leonardo Freitas</a>
+           desenvolvido por <a href="https://leonardo755.devlook.xyz">Leonardo Freitas</a>
         </p>
         <p>
         HTML + CSS
