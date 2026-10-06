@@ -8,5 +8,32 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: #f4f6f8;
     color: #333;
-    padding: 40px 20px
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin: 25px 0 15px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    
 }

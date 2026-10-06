@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form method="POST">
 
     <label>Nome do produto:</label>
-    <input type="text" name="categoria" required>
+    <input type="text" name="nome" required>
     <br><br>
 
     <label>Marca:</label>
@@ -112,6 +112,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $produtos = json_decode($conteudo, true);
 
     if (!empty($produtos)) {
+
+        $valorTotal = 0;
+        
         foreach ($produtos as $produto) {
             echo "<div>";
 
@@ -130,7 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             . "</p>";
 
             // Desafio extra 
-            $valorTotal + $produto["preco"] * $produto["quantidade"];
+            $valorTotal += $produto["preco"] * $produto["quantidade"];
 
             echo "<p><strong>Valor total em estoque:</strong> R$"
             . number_format($valorTotal, 2, ",", ".")
