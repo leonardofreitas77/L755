@@ -129,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Desafio extra 
             $valorTotal + $produto["preco"] * $produto["quantidade"];
 
-            echo "<p><strong>Valor total eme estoque:</strong> R$"
+            echo "<p><strong>Valor total em estoque:</strong> R$"
             . number_format($valorTotal, 2, ",", ".")
             . "</p>";
 
