@@ -93,4 +93,20 @@ body > div p {
     margin: 10px 0;
 }
 
+body > div strong {
+    color: #2c3e50;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
     
