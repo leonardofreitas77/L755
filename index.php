@@ -179,7 +179,7 @@
                     <span>CSS</span>
                     <!--span>PHP</span-->
                 </div>
-                <a href="cadastro.html">ver projetos</a>
+                <a href="cadastro-produtos.php">ver projetos</a>
             </div>
          </div>
       </section>
