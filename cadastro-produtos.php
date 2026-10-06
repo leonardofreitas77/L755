@@ -145,6 +145,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         }
 
+         // Mostra o total apenas uma vez
+        echo "<h3><strong>Valor total em estoque:</strong> R$ "
+        . number_format($valorTotal, 2, ",", ".")
+        . "</h3>";
+
+
     } else {
         echo "<p>Nenhum produto cadastrado.</p>";
 

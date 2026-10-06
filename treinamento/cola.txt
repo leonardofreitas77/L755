@@ -55,3 +55,19 @@ Pseudo-classe	                                    Exemplo	O que significa
 :has()	h2:has(+p)	                                Seleciona um elemento que possui determinada relação com outro
 
 :is()	:is(ul, ol)	                                Permite selecionar vários tipos de elementos de uma vez
+
+
+
+| `$_POST`              | Pega dados enviados pelo formulário |
+| `file_get_contents()` | Lê um arquivo                       |
+| `file_put_contents()` | Escreve em um arquivo               |
+| `json_decode()`       | JSON → array PHP                    |
+| `json_encode()`       | Array PHP → JSON                    |
+| `[]`                  | Adiciona item no array              |
+| `foreach`             | Percorre os itens                   |
+| `is_array()`          | Verifica se é array                 |
+| `empty()`             | Verifica se está vazio              |
+| `htmlspecialchars()`  | Protege texto ao colocar no HTML    |
+| `number_format()`     | Formata números                     |
+| `+=`                  | Soma e guarda o resultado           |
+| `*`                   | Multiplicação                       |
