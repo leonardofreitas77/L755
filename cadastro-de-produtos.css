@@ -35,5 +35,19 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    
+    color: #34495e;
+}
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152,219, 0.3); 
 }
