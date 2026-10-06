@@ -170,9 +170,9 @@
                 <div class="numero-projeto">
                     01
                 </div>
-                <h3>Sistemas de cadastro</h3>
+                <h3>cadastro de produtos</h3>
                 <p>
-                    Descrição do sistema do cadastro
+                    atividade 22 
                 </p>
                 <div class="tecnologias">
                     <span>HTML</span>
