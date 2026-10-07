@@ -71,3 +71,20 @@ Pseudo-classe	                                    Exemplo	O que significa
 | `number_format()`     | Formata números                     |
 | `+=`                  | Soma e guarda o resultado           |
 | `*`                   | Multiplicação                       |
+
+
+
+CRUD
+
+CREATE = CADASTRAR JOÃO, 18 ANOS
+
+READ = MOSTRAR: LUCAS - 24 ANOS
+
+UPDATE = ATUALIZAR UMA IDADE: LUCAS - 23 ANOS
+
+DELETE = REMOVER LUCAS, 23 ANOS.
+
+
+PHP:  
+file_get_contents() - CREATE
+file_put_contents - READ
