@@ -28,9 +28,10 @@
 <input type="number" class="nota2" id="nota2" name="nota2">
 
 
-<button type="submit"> Cadastrar</button>
+<button type="submit"> ENVIAR</button>
 
 </form>
+<h2><?= $situacao ?></h2>
 
 </body>
 </html>
