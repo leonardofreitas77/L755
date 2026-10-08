@@ -128,7 +128,7 @@
                     <span>CSS</span>
                     <!--span>PHP</span-->
                 </div>
-                <a href="funcoes.php">ver projetos</a>
+                <a href="funcoes2.php">ver projetos</a>
             </div>
             <!--PROJETO-->
          <div class="projetos">
