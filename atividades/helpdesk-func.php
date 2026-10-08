@@ -19,11 +19,19 @@ function salvarChamados($chamados) {
 
 function cadastrarChamado($nome, $setor, $equipamento, $descricao, $prioridade) {
 
-$novochamado = [
+$novoChamado = [
     "nome" => $nome,
-    "setor" = $setor,
+    "setor" => $setor,
     "equipamento" => $equipamento,
-    "descrição" => $descrição,
-    "prioridade" => $prioridade  ,
-]
+    "descricao" => $descricao,
+    "prioridade" => $prioridade,
+
+    "status" => "aberto"
+];
+
+ $chamados[] = $novoChamado;
+
+ salvarChamados($chamados);
+
+ return true;
 }
