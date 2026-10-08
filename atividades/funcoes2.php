@@ -17,14 +17,20 @@
     <title>Funções no front</title>
 </head>
 <body>
-    <h1><?=  $nomeEscola ?></h1>
-    <h2><?= saudacao() ?></h2>
-    <p><?= cumprimentar("Lucas") ?>
-    </p>
-    <p>
-        Resultado da soma:
-        <?= somar(10, 5) ?>
-    </p>
+    <form method="POST">
+   
+<label>NOTA 1</label>
+<input type="number" class="nota1" id="nota1" name="nota1">
+
+           
+
+<label>NOTA 2 </label>
+<input type="number" class="nota2" id="nota2" name="nota2">
+
+
+<button type="submit"> Cadastrar</button>
+
+</form>
 
 </body>
 </html>
