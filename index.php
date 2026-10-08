@@ -113,6 +113,23 @@
                 </div>
                 <a href="cadastro.html">ver projetos</a>
             </div>
+              <!--PROJETO-->
+         <div class="projetos">
+            <div class="card">
+                <div class="numero-projeto">
+                    01
+                </div>
+                <h3>conteudo novo</h3>
+                <p>
+                    Descrição do sistema do cadastro
+                </p>
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <!--span>PHP</span-->
+                </div>
+                <a href="funcoes.php">ver projetos</a>
+            </div>
             <!--PROJETO-->
          <div class="projetos">
             <div class="card">
