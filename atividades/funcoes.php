@@ -16,4 +16,21 @@ function somar($numero1, $numero2) {
 
     return $resultado;
 } 
+
+function calcularMedia($nota1, $nota2) {
+    $media =($nota1 + $nota2) / 2;
+
+    return $media;
+}
+
+function verificarStatus($media) {
+    if ($media >= 7)
+    {
+        echo "APROVADO";
+    }
+    else 
+    {
+        echo "REPROVADO";
+    }
+}
 ?>
