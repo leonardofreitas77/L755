@@ -136,6 +136,23 @@
                 <div class="numero-projeto">
                     01
                 </div>
+                <h3>conteudo novo</h3>
+                <p>
+                    Descrição do sistema do cadastro
+                </p>
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <!--span>PHP</span-->
+                </div>
+                <a href="atividades/helpdesk.php">ver projetos</a>
+            </div>
+            <!--PROJETO-->
+         <div class="projetos">
+            <div class="card">
+                <div class="numero-projeto">
+                    01
+                </div>
                 <h3>Sistemas de treinamento do css</h3>
                 <p>
                     treinando css 
