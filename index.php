@@ -136,9 +136,9 @@
                 <div class="numero-projeto">
                     01
                 </div>
-                <h3>conteudo novo</h3>
+                <h3>helpdesk</h3>
                 <p>
-                    Descrição do sistema do cadastro
+                    atividade 23
                 </p>
                 <div class="tecnologias">
                     <span>HTML</span>
