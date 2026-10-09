@@ -99,15 +99,15 @@ function gerarRelatorio() {
         $total = $total + 1;
 
         if ($chamado["status"] == "aberto") {
-            $aberto = $aberto + 1; 
+            $abertos = $abertos + 1; 
         }
         else {
             if ($chamado["status"] == "em andamento") {
-                $andamento = $andamento + 1;
+                $andamentos = $andamentos + 1;
             }
             else {
                 if ($chamado["status"] == "resolvido") {
-                    $resolvido = $resolvido + 1; 
+                    $resolvidos = $resolvidos + 1; 
                 }
             }
         }
@@ -115,8 +115,8 @@ function gerarRelatorio() {
     $relatorio = [
         "total" => $total,
         "abertos" => $abertos,
-        "andamento" => $andamento,
-        "resolvido" => $resolvido
+        "andamento" => $andamentos,
+        "resolvido" => $resolvidos
     ];
     return $relatorio;
 }

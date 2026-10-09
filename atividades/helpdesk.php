@@ -10,5 +10,8 @@ echo "<br>";
 echo "Chamados abertos " . $relatorio["abertos"];
 echo "<br>";
 
-echo "Chamados em adamento" . $relatorio["andamento"];
+echo "Chamados em adamentos" . $relatorio["andamentos"];
+echo "<br>";
+
+echo "chamados resolvidos" . $relatorio["resolvidos"];
 echo "<br>";
