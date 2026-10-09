@@ -60,3 +60,64 @@ function atualizarStatus ($indice, $novoStatus) {
     return true;
 }
 
+function excluirChamados() {
+    $chamados = lerChamados();
+
+    $numero = 0;
+    $encontrou = false; 
+
+    foreach ($chamados as $chamados) {
+        if ($numero == $indice) {
+            $encontrou = true;
+        }
+
+        $numero = $numero + 1;
+    }
+
+    if ($encontrou == false) {
+        return false;
+    }
+
+    unset($chamados[$indice]);
+
+    $chamados = array_values($chamados); 
+
+    salvarChamados($chamados);
+
+    return true; 
+}
+
+function gerarRelatorio() {
+    $chamados = lerChamados();
+
+    $total = 0; 
+    $abertos = 0;
+    $andamentos = 0;
+    $resolvidos = 0; 
+
+    foreach ($chamados as $chamado) {
+        $total = $total + 1;
+
+        if ($chamado["status"] == "aberto") {
+            $aberto = $aberto + 1; 
+        }
+        else {
+            if ($chamado["status"] == "em andamento") {
+                $andamento = $andamento + 1;
+            }
+            else {
+                if ($chamado["status"] == "resolvido") {
+                    $resolvido = $resolvido + 1; 
+                }
+            }
+        }
+    }
+    $relatorio = [
+        "total" => $total,
+        "abertos" => $abertos,
+        "andamento" => $andamento,
+        "resolvido" => $resolvido
+    ];
+    return $relatorio;
+}
+    
