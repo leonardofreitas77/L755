@@ -47,7 +47,7 @@ function atualizarStatus ($indice, $novoStatus) {
             $chamados[$indice]["status"] = $novoStatus;
         }
         else {
-            if ($novoStatus == "reslovido") {
+            if ($novoStatus == "resolvido") {
                 $chamados[$indice]["status"] = $novoStatus;
             }
             else {
@@ -60,13 +60,13 @@ function atualizarStatus ($indice, $novoStatus) {
     return true;
 }
 
-function excluirChamados() {
+function excluirChamados($indice) {
     $chamados = lerChamados();
 
     $numero = 0;
     $encontrou = false; 
 
-    foreach ($chamados as $chamados) {
+    foreach ($chamados as $chamado) {
         if ($numero == $indice) {
             $encontrou = true;
         }
