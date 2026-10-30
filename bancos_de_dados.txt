@@ -1,9 +1,64 @@
-CREATE TABLE 'alunos' (id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(100) NOT NULL, idade INT NOT NULL, email VARCHAR(100) NOT NULL );
+CREATE TABLE alunos (id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(100) NOT NULL, idade INT NOT NULL, email VARCHAR(100) NOT NULL );
 
-INSERT INTO `alunos` (`id`, `nome`, `idade`, `email`) VALUES ('1', 'Leonardo', '16', 'leonardofreitaas147@gmail.com'), ('2', 'Brian', '18', 'briangefter@gmail.com');
+INSERT INTO alunos (id, nome, idade, email) VALUES (1, Leonardo, 16, leonardofreitaas147@gmail.com), (2, Brian, 18, briangefter@gmail.com);
 
 UPDATE `alunos` SET `nome` = 'brian gefter' WHERE `alunos`.`id` = 2;
 
 DELETE FROM alunos WHERE id = 2;
 
 DROP TABLE alunos;
+
+operador               significado           exemplo                resultado
+=                      Igual                 idade = 20             idade = 20
+!= ou <>               Diferente             idade != 2             idade diferente de 20
+>                      Maior que             idade > 20             idade maior que 20
+<                      menor que             idade < 20             idade menor que 20
+>=                     Maior ou igual        idade >= 20            idade maior ou igual a 20 
+<=                     Menor ou igual        idade <= 20            idade menor ou igual a 20]
+
+SELECT * FROM alunos WHERE condicao;
+
+```
+
+---
+
+1. Operadores de Comparacao
+
+ = (Igual): `idade = 20`
+
+ <> ou != (Diferente): `idade <> 20`
+
+ > (Maior que): `idade > 20`
+
+ >= (Maior ou igual): `idade >= 20`
+
+ < (Menor que): `idade < 20`
+
+ <= (Menor ou igual): `idade <= 20`
+
+---
+
+2. Exemplos Praticos de Filtros
+
+ Igual (=): SELECT * FROM alunos WHERE turma = 755;
+
+ Diferente (<> ou !=): SELECT * FROM alunos WHERE ativo = 1;
+
+ Maior que (>): `SELECT * FROM alunos WHERE idade > 20;
+
+ Menor que (<): `SELECT * FROM alunos WHERE idade < 20;`
+
+ Maior ou igual (>=): `SELECT * FROM alunos WHERE nota >= 8.0;`
+
+ Menor ou igual (<=): `SELECT * FROM alunos WHERE nota <= 7.0;`
+
+ Entre valores (BETWEEN): `SELECT * FROM alunos WHERE idade BETWEEN 20 AND 23;`
+
+ Lista de valores (IN): `SELECT * FROM alunos WHERE turma IN (755, 315);`
+
+ Texto parcial (LIKE): `SELECT * FROM alunos WHERE nome LIKE 'A%';` ( `%` = comeca com A; `%...%` = contem a letra; `%...` = termina com a letra )
+
+ Condicoes multiplas (AND): `SELECT * FROM alunos WHERE turma = 755 AND nota >= 9.0;`
+
+ Condicoes alternativas (OR): `SELECT * FROM alunos WHERE turma = 755 OR nota >= 9.0;`
+ 
