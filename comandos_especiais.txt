@@ -1,0 +1,137 @@
+-- Atualizar preço de 3 produtos
+UPDATE produtos SET preco = 1600.00 WHERE id = 1;
+UPDATE produtos SET preco = 4300.00 WHERE id = 4;
+UPDATE produtos SET preco = 230.00 WHERE id = 7;
+
+-- Alterar quantidade em estoque de 2 produtos
+UPDATE produtos SET quantidade = 20 WHERE id = 1;
+UPDATE produtos SET quantidade = 10 WHERE id = 6;
+
+-- Alterar status de cliente de ativo para inativo
+UPDATE clientes SET ativo = 0 WHERE id = 1;
+
+-- Alterar a descrição de uma categoria
+UPDATE categorias SET descricao = 'Smartphones, celulares e acessórios diversos' WHERE id = 1;
+
+-- Cadastrar produto adicional e excluí-lo
+INSERT INTO produtos (nome, descricao, preco, quantidade, categoria_id, ativo)
+VALUES ('Produto Teste Exclusao', 'Sem uso', 10.00, 1, 1, 1);
+
+DELETE FROM produtos WHERE nome = 'Produto Teste Exclusao';
+
+-- Consultar registros modificados para verificação
+SELECT * FROM produtos WHERE id IN (1, 4, 6, 7);
+SELECT * FROM clientes WHERE id = 1;
+SELECT * FROM categorias WHERE id = 1;
+
+
+-- ============================================================
+-- ETAPA 6 – CONSULTAS COM WHERE E OPERADORES DE COMPARAÇÃO
+-- ============================================================
+
+-- Produtos com preço maior que R$ 100,00
+SELECT * FROM produtos WHERE preco > 100.00;
+
+-- Produtos com preço menor que R$ 50,00
+SELECT * FROM produtos WHERE preco < 50.00;
+
+-- Produtos com preço maior ou igual a R$ 200,00
+SELECT * FROM produtos WHERE preco >= 200.00;
+
+-- Produtos com quantidade menor ou igual a 10
+SELECT * FROM produtos WHERE quantidade <= 10;
+
+-- Somente clientes ativos
+SELECT * FROM clientes WHERE ativo = 1;
+
+-- Produtos que estejam inativos
+SELECT * FROM produtos WHERE ativo = 0;
+
+-- Produtos que não pertençam à categoria 1
+SELECT * FROM produtos WHERE categoria_id <> 1;
+
+
+-- ============================================================
+-- ETAPA 7 – OPERADORES LÓGICOS
+-- ============================================================
+
+-- Produtos ativos com preço maior que R$ 100,00
+SELECT * FROM produtos WHERE ativo = 1 AND preco > 100.00;
+
+-- Produtos com preço menor que R$ 50,00 OU maior que R$ 500,00
+SELECT * FROM produtos WHERE preco < 50.00 OR preco > 500.00;
+
+-- Produtos que NÃO estejam ativos
+SELECT * FROM produtos WHERE NOT ativo = 1;
+
+-- Produtos pertencentes às categorias 1 e 2 usando IN
+SELECT * FROM produtos WHERE categoria_id IN (1, 2);
+
+-- Produtos com preços entre R$ 100,00 e R$ 300,00 utilizando BETWEEN
+SELECT * FROM produtos WHERE preco BETWEEN 100.00 AND 300.00;
+
+-- Clientes ativos cadastrados a partir do dia 15/01/2024
+SELECT * FROM clientes WHERE ativo = 1 AND data_cadastro >= '2024-01-15';
+
+
+-- ============================================================
+-- ETAPA 8 – CONSULTAS AVANÇADAS
+-- ============================================================
+
+-- Produtos cujo nome comece com 'S'
+SELECT * FROM produtos WHERE nome LIKE 'S%';
+
+-- Produtos que contenham 'Gamer' no nome
+SELECT * FROM produtos WHERE nome LIKE '%Gamer%';
+
+-- Clientes cujo nome termine com 'a'
+SELECT * FROM clientes WHERE nome LIKE '%a';
+
+-- Organizar os produtos pelo preço, do menor para o maior
+SELECT * FROM produtos ORDER BY preco ASC;
+
+-- Organizar os produtos pelo preço, do maior para o menor
+SELECT * FROM produtos ORDER BY preco DESC;
+
+-- Organizar os clientes em ordem alfabética
+SELECT * FROM clientes ORDER BY nome ASC;
+
+-- Exibir somente os 5 produtos mais caros
+SELECT * FROM produtos ORDER BY preco DESC LIMIT 5;
+
+-- Exibir somente os 3 produtos mais baratos
+SELECT * FROM produtos ORDER BY preco ASC LIMIT 3;
+
+-- Exibir os produtos do 4º ao 8º mais caros (pulando 3, retornando 5)
+SELECT * FROM produtos ORDER BY preco DESC LIMIT 5 OFFSET 3;
+
+-- Exibir os IDs únicos das categorias presentes na tabela produtos
+SELECT DISTINCT categoria_id FROM produtos;
+
+
+-- ============================================================
+-- ETAPA 9 – FUNÇÕES DE AGREGAÇÃO
+-- ============================================================
+
+SELECT COUNT(*) AS total_clientes FROM clientes;
+SELECT COUNT(*) AS total_produtos FROM produtos;
+SELECT COUNT(*) AS total_produtos_ativos FROM produtos WHERE ativo = 1;
+SELECT SUM(quantidade) AS total_estoque FROM produtos;
+SELECT AVG(preco) AS media_preco_produtos FROM produtos;
+SELECT MIN(preco) AS menor_preco FROM produtos;
+SELECT MAX(preco) AS maior_preco FROM produtos;
+SELECT COUNT(*) AS total_pedidos FROM pedidos;
+SELECT SUM(valor_total) AS soma_total_pedidos FROM pedidos;
+SELECT AVG(valor_total) AS media_valor_pedidos FROM pedidos;
+
+
+-- ============================================================
+-- ETAPA 11 – CONSULTA FINAL
+-- ============================================================
+
+-- Consulta: Seleciona os 3 produtos mais caros, ativos, com preço acima de R$ 100,00
+SELECT nome, preco, quantidade
+FROM produtos
+WHERE ativo = 1 AND preco > 100.00
+ORDER BY preco DESC
+LIMIT 3;
