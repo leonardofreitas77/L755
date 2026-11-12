@@ -7,8 +7,8 @@
 
 // host = 'local host'
 $host = 'localhost';
-$db = 'joaoa755_db1';
-$user = 'joaoa755';
+$db = 'leonardo755_db1';
+$user = 'leonardo755';
 $pass = '755!@#';
 $charset = 'utf8mb4';
 
