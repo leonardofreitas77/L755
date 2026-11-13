@@ -67,3 +67,15 @@ th {
     background-color: #2878d0;
     color: white;
 }
+
+tr {
+    background-color: white;
+}
+
+a {
+    color: blue;
+}
+
+hr {
+    margin: 20px;
+}
