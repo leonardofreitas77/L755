@@ -23,5 +23,47 @@ h2 {
 }
 
 form {
-    margin-bottom: ;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 250px;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2878d0;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #165ca5
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #2878d0;
+    color: white;
 }
