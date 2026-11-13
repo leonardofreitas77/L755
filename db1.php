@@ -80,6 +80,7 @@
 </head>
 <body>
     <h1>Sistema de Cadastro de Produtos</h1>
+    <link rel="stylesheet" href="db1.css">
     <h2>
         <?php
             if ($produtoEditar) {
