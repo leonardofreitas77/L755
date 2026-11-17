@@ -14,7 +14,7 @@ operador               significado           exemplo                resultado
 >                      Maior que             idade > 20             idade maior que 20
 <                      menor que             idade < 20             idade menor que 20
 >=                     Maior ou igual        idade >= 20            idade maior ou igual a 20 
-<=                     Menor ou igual        idade <= 20            idade menor ou igual a 20]
+<=                     Menor ou igual        idade <= 20            idade menor ou igual a 20
 
 SELECT * FROM alunos WHERE condicao;
 
