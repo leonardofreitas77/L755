@@ -13,12 +13,21 @@ try {
 } catch (PDOException $e) {
     die('Falha no banco: ' . $e->getMessage());
 }
-$mensagem = $_GET['msg'] ?? '';
-$acao = $_POST['acao'] ?? $_GET['acao'] ?? '';
+$mensagem = trim($_GET['msg'] ?? '');
+// coloquei trim aonde não tinha.
+$acao = trim($_POST['acao'] ?? $_GET['acao'] ?? '');
 if ($acao === 'login') {
-    $email = $_POST['email'] ?? '';
-    $password = $_POST['senha'] ?? '';
-    $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$password'";
+    $email = trim($_POST['email'] ?? '');
+    $password = trim($_POST['senha'] ?? '');
+
+    $sql = "SELECT * FROM usuarios WHERE email = :email AND senha = :password";
+//arrumei tambem deixando mais seguro usando :email ao inves de '$email '
+    $stmt = $pdo->prepare($sql);
+    // e arrumei aqui usando prepare e execute 
+    $stmt ->execute([
+        ':email' => $email,
+        ':senha' => $password   ]);
+
     $encontrado = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     if ($encontrado) {
         $_SESSION['usuario'] = $encontrado['nome'];
@@ -33,9 +42,20 @@ if ($acao === 'cadastrar') {
     $preco = $_POST['preco'] ?? '';
     $estoque = $_POST['estoque'] ?? '';
     $categoria = $_POST['categoria'] ?? '';
-    $sql = "INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES ('$nome', '$descricao', '$preco', '$estoque', '$categoria')";
-    $pdo->exec($sql);
+    $sql = "INSERT INTO produtos (nome, descricao, preco, estoque, categoria)
+            VALUES (:nome, :descricao, :preco, :estoque, :categoria)";
+    $stmt = $pdo->prepare($sql);
+    // aqui a mesma coisa do de cima 
+    $stmt->execute([
+        ':nome' => $nome,
+        ':descricao' => $descricao,
+        ':preco' => $preco,
+        ':estoque' => $estoque,
+        ':categoria' => $categoria 
+
+    ]);
     $mensagem = "Produto $nome cadastrado!";
+    
 }
 if ($acao === 'atualizar') {
     $id = $_POST['id'] ?? '';
@@ -44,21 +64,47 @@ if ($acao === 'atualizar') {
     $preco = $_POST['preco'] ?? '';
     $estoque = $_POST['estoque'] ?? '';
     $categoria = $_POST['categoria'] ?? '';
-    $sql = "UPDATE produtos SET nome='$nome', descricao='$descricao', preco='$preco', estoque='$estoque', categoria='$categoria' WHERE id=$id";
-    $pdo->exec($sql);
+    $sql = "UPDATE produtos SET 
+    nome = :nome,
+    descricao = :descricao,
+    preco = :preco,
+    estoque = :estoque,
+    categoria = :categoria WHERE id = :id";
+    
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->execute([
+        ':nome' => $nome,
+        ':descricao' => $descricao,
+        ':preco' => $preco,
+        ':estoque' => $estoque,
+        ':categoria' => $categoria,
+        ':id' => $id 
+    ]);
     $mensagem = 'Produto atualizado.';
 }
 if ($acao === 'excluir') {
     $id = $_GET['id'] ?? '';
-    $pdo->exec("DELETE FROM produtos WHERE id=$id");
+
+    $stmt = $pdo->prepare("DELETE FROM produtos WHERE id= :id");
+    $stmt->execute([':id' => $id]);
     $mensagem = 'Produto excluído.';
 }
 $busca = $_GET['busca'] ?? '';
 $categoriaFiltro = $_GET['categoria'] ?? '';
 $ordem = $_GET['ordem'] ?? 'id';
-$sqlLista = "SELECT * FROM produtos WHERE (nome LIKE '%$busca%' OR descricao LIKE '%$busca%')";
-if ($categoriaFiltro !== '') { $sqlLista .= " AND categoria = '$categoriaFiltro'"; }
+$sqlLista = "SELECT * FROM produtos WHERE (nome LIKE :busca OR descricao LIKE :busca)";
+if ($categoriaFiltro !== '')
+     { $sqlLista .= " AND categoria = :categoriaFiltro";
+ }
 $sqlLista .= " ORDER BY $ordem";
+
+$ordensPermitidas =['id','nome','preco','estoque','categoria'];
+
+if (!in_array($ordem, $ordensPermitidas, true)) {
+    $ordem = 'id';
+}
+
 $produtos = $pdo->query($sqlLista)->fetchAll(PDO::FETCH_ASSOC);
 $editar = null;
 if (isset($_GET['editar'])) {
