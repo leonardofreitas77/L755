@@ -1,6 +1,9 @@
 <?php
-// Objetivo: localizar, explicar e corrigir vulnerabilidades.
-ini_set('display_errors', 1);
+// Display_errors, 0Não exibir o erro interno para qualquer usuário.
+ini_set('display_errors', 0);
+// log_errors, '1' = Registrar os logs num arquivo interno o qual o usuario padrão não possui acesso.
+ini_set('log_errors', '1');
+// Define quais tipos de erros o PHP deve registar, E_ALL = TODOS os erros.
 error_reporting(E_ALL);
 session_start();
 $host = '127.0.0.1';
@@ -12,10 +15,16 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die('Falha no banco: ' . $e->getMessage());
+    http_response_code(500);
+    exit('erro interno de conexão.');
 }
-$mensagem = trim($_GET['msg'] ?? '');
-// coloquei trim aonde não tinha.
-$acao = trim($_POST['acao'] ?? $_GET['acao'] ?? '');
+
+$mensagem = $_GET['msg'] ?? '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$acao = $_POST['acao'] ?? $_GET['acao'] ?? '';
+}
+
+
 if ($acao === 'login') {
     $email = trim($_POST['email'] ?? '');
     $password = trim($_POST['senha'] ?? '');
@@ -23,7 +32,7 @@ if ($acao === 'login') {
     $sql = "SELECT * FROM usuarios WHERE email = :email AND senha = :password";
 //arrumei tambem deixando mais seguro usando :email ao inves de '$email '
     $stmt = $pdo->prepare($sql);
-    // e arrumei aqui usando prepare e execute 
+    // e arrumei aqui usando prepare e execute.
     $stmt ->execute([
         ':email' => $email,
         ':senha' => $password   ]);
@@ -93,17 +102,15 @@ if ($acao === 'excluir') {
 $busca = $_GET['busca'] ?? '';
 $categoriaFiltro = $_GET['categoria'] ?? '';
 $ordem = $_GET['ordem'] ?? 'id';
-$sqlLista = "SELECT * FROM produtos WHERE (nome LIKE :busca OR descricao LIKE :busca)";
-if ($categoriaFiltro !== '')
-     { $sqlLista .= " AND categoria = :categoriaFiltro";
- }
-$sqlLista .= " ORDER BY $ordem";
+$sqlLista = "SELECT * FROM produtos WHERE (nome LIKE :buscaNome OR descricao LIKE :buscaDescricao)";
 
-$ordensPermitidas =['id','nome','preco','estoque','categoria'];
+$parametros =[
+    'buscaNome' => "%$busca%",
+    'buscaDescricao' => "%$busca%"
 
-if (!in_array($ordem, $ordensPermitidas, true)) {
-    $ordem = 'id';
-}
+];
+
+
 
 $produtos = $pdo->query($sqlLista)->fetchAll(PDO::FETCH_ASSOC);
 $editar = null;
@@ -111,6 +118,9 @@ if (isset($_GET['editar'])) {
     $editar = $pdo->query('SELECT * FROM produtos WHERE id=' . $_GET['editar'])->fetch(PDO::FETCH_ASSOC);
 }
 $total = $pdo->query('SELECT COUNT(*) FROM produtos')->fetchColumn();
+function escapar($valor) {
+    return htmlspecialchars($valor)
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
